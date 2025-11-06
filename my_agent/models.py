@@ -13,5 +13,5 @@ open_router_sonnet = LiteLlm(
 open_router_haiku = LiteLlm(
     api_base=os.getenv("OPENROUTER_BASE_URL"),
     api_key=os.getenv("OPENROUTER_API_KEY"),
-    model="openrouter/anthropic/claude-4.5-haiku"
+    model="openrouter/anthropic/claude-3.5-haiku",
 )

@@ -9,17 +9,6 @@ from google.adk.tools.preload_memory_tool import PreloadMemoryTool
 
 from my_agent import models
 
-class TimeExecutor(BaseAgent):
-    name: str = "TimeExecutor"
-    description: str = "Gets the weather in a specific city"
-
-    async def run_async_impl(self, context: InvocationContext) -> AsyncGenerator[Event, None]:
-        """Custom implementation logic for the task.
-        """
-        yield Event(author=self.name, content="Task finished successfully.")
-
-time_agent = TimeExecutor()
-
 async def auto_save_session_to_memory_callback(callback_context):
     import sys
     # Check if memory_service is available before using it
